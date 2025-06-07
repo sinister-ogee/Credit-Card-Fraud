@@ -66,7 +66,7 @@ Dataset provided by Worldline and ULB via [Kaggle](https://www.kaggle.com/datase
 **Arnold Muzarurwi**  
 Master’s Student, Data Analytics & Visualization  
 📫 [amuzarur@mail.yu.edu](mailto:amuzarur@mail.yu.edu)  
-🌐 [LinkedIn](https://www.linkedin.com/in/arnold-muzarurwi-4681852b2) | [GitHub](https://github.com/sinister-ogee)
+🌐 [LinkedIn](https://www.linkedin.com/in/arnold-muzarurwi-4681852b2) 
 
 
 
