@@ -50,5 +50,5 @@ This project applies a deep learning approach to detect fraudulent credit card t
 
 Emphasis was placed on **recall** to reduce the risk of false negatives — crucial in fraud detection.
 
-## 📁 Project Structure
+
 
