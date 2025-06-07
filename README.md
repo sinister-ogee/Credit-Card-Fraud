@@ -50,5 +50,24 @@ This project applies a deep learning approach to detect fraudulent credit card t
 
 Emphasis was placed on **recall** to reduce the risk of false negatives — crucial in fraud detection.
 
+## 📌 Future Improvements
+
+- Try XGBoost or Random Forest for comparison  
+- Implement dropout layers or L2 regularization  
+- Deploy with Streamlit or Flask for real-time demo  
+
+## 🧻 License
+
+This project is for educational purposes only.  
+Dataset provided by Worldline and ULB via [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+
+## 👤 Author
+
+**Arnold Muzarurwi**  
+Master’s Student, Data Analytics & Visualization  
+📫 [amuzarur@mail.yu.edu](mailto:amuzarur@mail.yu.edu)  
+🌐 [LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/sinister-ogee)
+
+
 
 
