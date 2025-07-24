@@ -1,4 +1,4 @@
-# Credit Card Fraud Detection Using Neural Networks
+# Credit Card Fraud Detection Using Deep Learning
 
 This project applies a deep learning approach to detect fraudulent credit card transactions using real-world anonymized data. It uses a Multi-Layer Perceptron (MLP) built with TensorFlow and Keras to classify transactions as fraudulent or legitimate.
 
