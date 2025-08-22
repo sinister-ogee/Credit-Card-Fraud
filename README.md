@@ -64,6 +64,7 @@ This project implements a deep learning approach to detect fraudulent credit car
 ## 👤 Author
 **Arnold Muzarurwi**  
 Master’s Student, Data Analytics & Visualization  
-📫 amuzarur@mail.yu.edu | 🌐 LinkedIn  
+📫 amuzarur@mail.yu.edu | [🌐 LinkedIn](https://www.linkedin.com/in/arnold-tatenda-muzarurwi-4681852b2)
+  
 
 
