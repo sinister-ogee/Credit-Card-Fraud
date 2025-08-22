@@ -1,74 +1,69 @@
 # Credit Card Fraud Detection Using Deep Learning
 
-This project applies a deep learning approach to detect fraudulent credit card transactions using real-world anonymized data. It uses a Multi-Layer Perceptron (MLP) built with TensorFlow and Keras to classify transactions as fraudulent or legitimate.
+This project implements a deep learning approach to detect fraudulent credit card transactions using real-world anonymized data. A Multi-Layer Perceptron (MLP) built with TensorFlow and Keras was trained, tested, and compared against a Random Forest baseline to evaluate effectiveness on imbalanced data.
+
+---
 
 ## 📊 Overview
+- Fraudulent transactions represent less than 0.2% of the dataset, making class imbalance a major challenge.  
+- Two MLP architectures were tested: one with a **single hidden layer** and another with **two hidden layers**.  
+- Performance was evaluated against Random Forest to test the hypothesis that deeper MLPs yield significant improvements in fraud detection.  
 
-- Fraudulent transactions are rare but costly.
-- The dataset is highly imbalanced (less than 1% fraud cases).
-- This project focuses on high **recall** and **precision** rather than just accuracy.
+---
 
 ## 📁 Dataset
+- **Source**: Kaggle – Credit Card Fraud Detection  
+- **Observations**: 284,807 transactions  
+- **Features**: 30 (V1–V28 anonymized PCA features, plus standardized Amount, excluding Time)  
+- **Target**: Class (0 = Legitimate, 1 = Fraud)  
 
-- **Source**: [Kaggle – Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
-- **Observations**: 284,807  
-- **Features**: 30 (V1–V28 anonymized features, plus `Time`, `Amount`)  
-- **Target**: `Class` (0 = Legitimate, 1 = Fraud)
+---
 
 ## 🔧 Technologies Used
+- **Programming**: Python 3  
+- **Libraries**: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn  
+- **Deep Learning**: TensorFlow, Keras  
+- **Imbalanced Data Handling**: ADASYN oversampling, random undersampling  
+- **Evaluation**: Accuracy, F1-score, ROC-AUC, Wilcoxon Signed-Rank Test  
 
-- **Python 3**
-- **NumPy, Pandas** – Data manipulation
-- **Matplotlib, Seaborn** – Visualizations
-- **Scikit-learn** – Evaluation metrics
-- **TensorFlow, Keras** – Neural network modeling
-- **SMOTE (Imbalanced-learn)** – Class balancing
+---
 
 ## 🔄 Workflow
+### Data Preprocessing
+- Dropped non-informative *Time* feature  
+- Standardized *Amount* feature using RobustScaler  
+- Split into training, validation, and test sets with stratified sampling  
+- Balanced training data using **ADASYN oversampling** and controlled undersampling  
 
-1. **Data Exploration & Preprocessing**
-   - Visualized class imbalance and feature correlations
-   - Normalized `Amount` feature
-   - Applied SMOTE to balance dataset
+### Model Building
+- Implemented MLP models with 1 and 2 hidden layers  
+- Tuned hyperparameters (neurons, dropout, initialization, learning rate) via grid search  
+- Optimizer: Adam | Loss: Binary Crossentropy | Activation: ReLU (hidden), Sigmoid (output)  
 
-2. **Model Building**
-   - MLP with two hidden layers (16 and 8 units) and a sigmoid output layer
-   - Activation: ReLU (hidden layers), Sigmoid (output)
-   - Loss: Binary crossentropy | Optimizer: Adam
+### Model Evaluation
+- Compared **single-layer vs dual-layer MLPs** over 60+ runs  
+- Benchmarked against **Random Forest** results  
+- Applied **Wilcoxon Signed-Rank Test** to assess statistical significance  
 
-3. **Model Evaluation**
-   - Confusion matrix
-   - ROC-AUC curve
-   - Precision, Recall, F1 Score
+---
 
 ## 📈 Results
+- **F1-score (dual-layer MLP):** ~0.77 (mean across multiple runs)  
+- Statistically significant performance difference between single- and dual-layer MLPs (p < 0.05)  
+- Models with dropout showed improved generalization on validation data  
 
-| Metric        | Value (Approx.) |
-|---------------|-----------------|
-| Accuracy      | ~99%            |
-| Recall (Fraud)| High            |
-| AUC Score     | ~0.99           |
-
-Emphasis was placed on **recall** to reduce the risk of false negatives — crucial in fraud detection systems.
+---
 
 ## 📌 Future Improvements
+- Explore advanced ensemble methods (XGBoost, Random Forest tuning)  
+- Deploy trained model as an API using Flask or FastAPI  
+- Integrate with a real-time fraud monitoring pipeline  
 
-- Try XGBoost or Random Forest for comparison  
-- Implement dropout layers or L2 regularization  
-- Deploy with Streamlit or Flask for real-time demo  
-
-## 🧻 License
-
-This project is for educational purposes only.  
-Dataset provided by Worldline and ULB via [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+---
 
 ## 👤 Author
-
 **Arnold Muzarurwi**  
 Master’s Student, Data Analytics & Visualization  
-📫 [amuzarur@mail.yu.edu](mailto:amuzarur@mail.yu.edu)  
-🌐 [LinkedIn](https://www.linkedin.com/in/arnold-muzarurwi-4681852b2) 
-
-
+📫 amuzarur@mail.yu.edu | 🌐 LinkedIn  
 
 
